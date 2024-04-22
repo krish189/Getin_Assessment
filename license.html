@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driving License Renewal</title>
+    <link rel="stylesheet" href="licensestyle.css">
+</head>
+<body>
+    <script src="license.js"></script>
+    <div id="renew1">
+       <h3>Driving License Renewal</h3>
+       <div id="slide">
+          <div id="progress"></div>
+          <h4>Let's get started!</h4>
+          <p>Add your details(As per your registered records)</p>
+          <label for="Name" class="label"><b>Name</b></label><br>
+          <input type="text" id="Name" placeholder="Enter Name" oninput="updateProgress()"><br><br>
+          <label for="Nature" id="Nature"><b>Nature of Driving License</b></label><br>
+          <div class="radios">
+          <div id="Private"><input type="radio" id="private" value="private" onchange="updateProgress()">&nbsp;&nbsp;&nbsp;Private</div>
+          <div id="Commercial"><input type="radio" id="commercial" value="commercial" onchange="updateProgress()">&nbsp;&nbsp;&nbsp;Commercial</div>
+          </div><br>
+          <label for="Type" id="Type"><b>Type of Previous Driving License</b></label><br>
+          <div class="radios">
+            <div id="Paper"><input type="radio" id="paper" value="private" onchange="updateProgress()">&nbsp;&nbsp;Paper Driving License</div>
+            <div id="Smart"><input type="radio" id="smart" value="commercial" onchange="updateProgress()">&nbsp;&nbsp;Smart Driving License</div>
+          </div><br><br><br>
+          <button id="back1" onclick="back1()">Back</button>
+       </div>
+    </div>
+    <div id="renew2">
+        <h3>Driving License Renewal</h3>
+        <div id="slide">
+           <div id="progress1"></div>
+           <h4>Let's get started!</h4>
+           <p>Add your details(As per your registered records)</p>
+           <label for="Place" id="Place"><b>Place where Driving License was issued</b></label><br>
+           <input type="text" id="placename" placeholder="Enter Place Name" oninput="updateProgress2()"><br><br>
+           <div id="dropdown_without_select">
+            <label for="choose_issue" id="issue"><b>Issued Year of License</b></label>
+            <p id="choose_issue"  onclick="dropdown_click1()">Choose Issued Year of License<img src="dropdown_icon.png" alt="downicon"></p>
+          </div>
+        <div id="option">
+            <ul>
+                <li onclick="selectYear1(2015)">2015</li><br>
+                <li onclick="selectYear1(2010)">2010</li><br>
+                <li onclick="selectYear1(2005)">2005</li><br>
+                <li onclick="selectYear1(2000)">2000</li><br>
+                <li onclick="selectYear1(1995)">1995</li><br>
+                <li onclick="selectYear1(1990)">1990</li><br>
+            </ul>
+        </div>
+        <div id="dropdown_without_select1">
+            <label for="choose_exp" id="exp"><b>Expired Year of License</b></label>
+            <p id="choose_exp"  onclick="dropdown_click2()">Choose Expired Year of License<img src="dropdown_icon.png" alt="downicon"></p>
+          </div>
+        <div id="option2">
+            <ul>
+                <li onclick="selectYear2(2015)">2015</li><br>
+                <li onclick="selectYear2(2010)">2010</li><br>
+                <li onclick="selectYear2(2005)">2005</li><br>
+                <li onclick="selectYear2(2000)">2000</li><br>
+                <li onclick="selectYear2(1995)">1995</li><br>
+                <li onclick="selectYear2(1990)">1990</li><br>
+            </ul>
+        </div>
+        <button id="back2" onclick="back2()">Back</button>
+     </div>
+    </div>
+</body>
+</html>
